@@ -1,0 +1,4 @@
+{
+    "command": "npm start -- --port <port>",
+    "working_directory": "/tmp/kavia/workspace/code-generation/tictactoe-615520-d7dc40cf/tictactoe"
+}

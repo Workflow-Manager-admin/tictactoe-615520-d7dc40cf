@@ -1,0 +1,26 @@
+<div class="game-container">
+  <div class="status-bar">
+    {{ getStatus() }}
+  </div>
+
+  <div class="game-board">
+    @for (row of board; track $index; let i = $index) {
+      <div class="board-row">
+        @for (cell of row; track $index; let j = $index) {
+          <button 
+            class="cell" 
+            [class.x]="cell === 'X'"
+            [class.o]="cell === 'O'"
+            (click)="makeMove(i, j)"
+          >
+            {{ cell }}
+          </button>
+        }
+      </div>
+    }
+  </div>
+
+  <button class="reset-button" (click)="resetGame()">
+    Reset Game
+  </button>
+</div>
